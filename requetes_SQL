@@ -1,0 +1,44 @@
+--Question 19 : Écrivez les requêtes SQL permettant de connaître…
+--Les 10 pays ayant le plus haut ratio disponibilité alimentaire/habitant en termes de protéines (en kg) par habitant, 
+--puis en termes de kcal par habitant.
+SELECT pays,sum((dispo_prot/1000)*365) as dispo_prot_modif
+FROM dispo_alim 
+GROUP BY pays
+ORDER BY dispo_prot_modif DESC LIMIT 10;
+
+SELECT pays,sum(dispo_alim_kcal_p_j*365) as dispo_alim_modif
+FROM dispo_alim 
+GROUP BY pays
+ORDER BY dispo_alim_modif DESC LIMIT 10;
+
+--Pour chaque année disponible, les 10 pays ayant le plus faible ratio disponibilité alimentaire/habitant en termes de 
+--protéines (en kg) par habitant. Le nombre de lignes de la table renvoyée sera donc égal à 10 fois le nombre d'années 
+--disponibles.
+SELECT annee, pays, sum((dispo_prot/1000)*365) as dispo_prot_modif
+FROM dispo_alim 
+GROUP BY annee, pays
+ORDER BY dispo_prot_modif  ASC LIMIT 10;
+
+--La quantité totale (en kg) de produits perdus par pays et par année. La table renvoyée contiendra donc une ligne 
+--par couple (pays, année).
+SELECT pays, annee, sum(pertes) as pertes
+FROM equilibre_prod 
+GROUP BY pays, annee;
+
+--Les 10 pays pour lesquels la proportion de personnes sous-alimentées est la plus forte.
+SELECT pays, annee,(nb_personnes/population) as ratio
+FROM population 
+INNER JOIN sous_nutrition 
+ON (population.pays=sous_nutrition.pays) 
+AND (population.code_pays=sous_nutrition.code_pays) 
+AND (population.annee=sous_nutrition.annee) 
+WHERE population.annee = '2013'
+ORDER BY ratio DESC LIMIT 10;
+
+--Les 10 produits pour lesquels le ratio Autres utilisations/Disponibilité intérieure est le plus élevé
+SELECT produit, AVG(autres_utilisations/dispo_int) as ratio
+FROM equilibre_prod
+GROUP BY produit
+ORDER BY ratio DESC LIMIT 10;
+
+                    
