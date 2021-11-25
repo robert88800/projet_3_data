@@ -1,0 +1,12 @@
+code_domaine,domaine,code_pays,pays,code_element,element,code_produit,produit,code_annee,annee,unite,valeur,symbole,description_d_symbole
+"FBS","Bilans Alimentaires","68","France","5511","Production","2511","Blé","2013","2013","Milliers de tonnes","38614","S","Données standardisées"
+"FBS","Bilans Alimentaires","68","France","5611","Importations - Quantité","2511","Blé","2013","2013","Milliers de tonnes","2055","S","Données standardisées"
+"FBS","Bilans Alimentaires","68","France","5072","Variation de stock","2511","Blé","2013","2013","Milliers de tonnes","1131","S","Données standardisées"
+"FBS","Bilans Alimentaires","68","France","5911","Exportations - Quantité","2511","Blé","2013","2013","Milliers de tonnes","21502","S","Données standardisées"
+"FBS","Bilans Alimentaires","68","France","5301","Disponibilité intérieure","2511","Blé","2013","2013","Milliers de tonnes","20298","S","Données standardisées"
+"FBS","Bilans Alimentaires","68","France","5521","Aliments pour animaux","2511","Blé","2013","2013","Milliers de tonnes","7822","S","Données standardisées"
+"FBS","Bilans Alimentaires","68","France","5527","Semences","2511","Blé","2013","2013","Milliers de tonnes","748","S","Données standardisées"
+"FBS","Bilans Alimentaires","68","France","5123","Pertes","2511","Blé","2013","2013","Milliers de tonnes","358","S","Données standardisées"
+"FBS","Bilans Alimentaires","68","France","5131","Traitement","2511","Blé","2013","2013","Milliers de tonnes","1575","S","Données standardisées"
+"FBS","Bilans Alimentaires","68","France","5154","Autres Utilisations","2511","Blé","2013","2013","Milliers de tonnes","2824","S","Données standardisées"
+"FBS","Bilans Alimentaires","68","France","5142","Nourriture","2511","Blé","2013","2013","Milliers de tonnes","6971","S","Données standardisées"
